@@ -12,25 +12,26 @@ To calculate the data bytes, divide the line buffer into 5 rows of 5 leds. Figur
 The sign doesn't apear to have a built in character map, so you have to render the text/graphics yourself.
 
 Protocol Command List:  I am going to use decimal equivalents for the byte values. 
-4 - clears the screen
-5 - writes the buffer to the screen - send a colour and up to 5 data bytes first
-*colour modes* - The sign can only do two colours at once, with off being a colour 
-6 - red pixel 
-7 - green
-8 - orange
-9 - interlaced red and green 
-10 - red and orange
-11 - green and red
-12 - green and orange
-13 - orange and red
-14 - orange and green
- */colour modes*
-15 - makes the sign blink at ~1hz
-16 - stops the blinking
-*data blocks*
-32 - 63 first block of 5 leds
-64 -  95 second block of 5
-96 - 127 - third block of 5
-128 - 159 forth block of 5
-160 - 191 - fifth block - bottom row ignored (screen is 24 pixels high not 25).
+
+*4 - clears the screen
+*5: writes the buffer to the screen - send a colour and up to 5 data bytes first
+colour modes: The sign can only do two colours at once, with off being a colour 
+*6: red pixel 
+*7: green
+*8: orange
+*9: interlaced red and green 
+*10: red and orange
+*11: green and red
+*12: green and orange
+*13: orange and red
+*14: orange and green
+
+*15: makes the sign blink at ~1hz
+*16: stops the blinking
+data blocks
+*32-63 first block of 5 leds
+*64-95 second block of 5
+*96-127: third block of 5
+*128-159: forth block of 5
+*160-191: fifth block - bottom row ignored (screen is 24 pixels high not 25).
 
